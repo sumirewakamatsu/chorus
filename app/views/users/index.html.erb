@@ -1,0 +1,9 @@
+<h1> 団体一覧　</h1>
+<div class="user-container">
+  <% @users.each do |t| %>
+    <div class="user">
+      <%= t.email %>
+     <%= link_to "詳細へ", user_path(t.id) %> 
+    </div>
+  <% end %>
+</div>

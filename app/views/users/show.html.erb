@@ -1,0 +1,19 @@
+<h1>詳細ページ</h1>
+<p>メールアドレス : <%= @user.email %></p>
+
+<% if current_user.id == @user.id %>
+  <%= link_to "プロフィールを編集する", edit_user_registration_path %>
+  <%= link_to "新規投稿する", :controller => "chorus", :action => "new" %>
+<% end %>
+
+<h2>ユーザーの投稿一覧</h2>
+<% @user.chorus.each do |t| %>
+  <%= t.user.email %>
+  <%= t.about %>
+  <%= image_tag t.image_url, size: "250x200" if t.image? %>
+<% end %>
+
+
+<%= link_to "投稿を編集する",:controller => "chorus", :action => "edit" %>
+<%= link_to "団体一覧に戻る",:controller => "users", :action => "index" %>
+<%= link_to "トップページへ",:controller => "chorus", :action => "index" %>

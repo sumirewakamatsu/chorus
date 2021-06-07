@@ -1,0 +1,9 @@
+<h1>Join our Concerts </h1>
+<h3>演奏会詳細</h3>
+<div class="about">
+  <p><%= @choru.about %></p>
+  <p><%= @choru.created_at %></p>
+</div>
+
+<%= link_to "開催一覧に戻る", chorus_path %>
+<%= link_to "編集する", edit_choru_path(@choru.id) %>
