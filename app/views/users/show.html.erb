@@ -8,12 +8,16 @@
 
 <h2>ユーザーの投稿一覧</h2>
 <% @user.chorus.each do |t| %>
+  <div>
+  <div><%= image_tag t.image_url, size: "250x200" if t.image? %></div>
   <%= t.user.email %>
   <%= t.about %>
-  <%= image_tag t.image_url, size: "250x200" if t.image? %>
+  </div>
+  <%= link_to "投稿を編集する", edit_choru_path(t.id) %>
+  <%= link_to "削除する", choru_path(t.id), method: :delete %>
 <% end %>
 
 
-<%= link_to "投稿を編集する",:controller => "chorus", :action => "edit" %>
-<%= link_to "団体一覧に戻る",:controller => "users", :action => "index" %>
-<%= link_to "トップページへ",:controller => "chorus", :action => "index" %>
+
+<%= button_to "団体一覧に戻る",:controller => "users", :action => "index" %>
+<%= button_to "トップページへ",:controller => "chorus", :action => "index" %>
