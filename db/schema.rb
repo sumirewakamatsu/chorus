@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_06_115754) do
+ActiveRecord::Schema.define(version: 2021_06_14_120906) do
 
   create_table "chorus", force: :cascade do |t|
     t.datetime "date"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2021_06_06_115754) do
     t.string "image"
     t.string "name"
     t.text "profile"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
