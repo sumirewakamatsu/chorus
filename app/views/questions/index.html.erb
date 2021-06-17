@@ -1,0 +1,14 @@
+<h1>質問投稿一覧</h1>
+<%= link_to "新規投稿する", :controller => "questions", :action => "new" %>
+<div class="questions-container">
+  <% @questions.each do |t| %>
+    <div class="question">
+     <%= t.title %>
+     <%= t.body %>
+     <%= link_to "詳細へ", question_path(t.id) %>
+     <%= link_to "編集する", edit_question_path(t.id)
+    </div>
+    
+</div>
+
+<% end %>

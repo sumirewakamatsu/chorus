@@ -1,7 +1,6 @@
 <h1>Join our Concerts</h1>
 
 <div class="chorus-container">
-<li><%= link_to '団体一覧へ！', :controller => "users", :action => "index" %>
     
   <% if user_signed_in? %>
   <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>

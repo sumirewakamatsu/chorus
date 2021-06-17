@@ -1,0 +1,9 @@
+<h>質問内容</h>
+<h3>質問詳細</h3>
+<div class= "question" >
+ <p><%= @question.title %></p>
+ <p><%= @question.body %></p>
+</div>
+
+<%= link_to "質問一覧に戻る", questions_path %>
+<%= link_to "編集する", edit_question_path(@question.id) %>

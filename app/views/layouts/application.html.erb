@@ -2,15 +2,24 @@
 <html>
   <head>
     <title>AppChorus</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+   <header>
+      <h1>集まれ合唱人</h1>
+        <div class="header-list">
+         <ul>
+          <li><%= link_to"団体一覧へ", users_path %></li>
+          <li><%= link_to"質問投稿へ", questions_path %><li>
+         </ul>
+      </div>
+    </header>
+   <main>
+      <%= yield %>
+   </main>
   </body>
 </html>

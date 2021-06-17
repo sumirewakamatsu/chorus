@@ -5,6 +5,8 @@ Rails.application.routes.draw do
  resources :chorus
  root 'chorus#index'
 
- resources :users, only: [:show, :index]  
-
+ resources :users, only: [:show, :index]
+ 
+ resources :questions
+ resources :answers
 end
