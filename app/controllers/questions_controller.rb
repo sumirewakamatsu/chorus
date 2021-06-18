@@ -8,8 +8,10 @@ class QuestionsController < ApplicationController
     end
     def create
         question = Question.new(question_params)
+        question.user_id = current_user.id
+
         if question.save
-            redirect_to　:action => "index"
+            redirect_to :action => "index"
         else
             redirect_to :action => "new"
         end
@@ -17,6 +19,7 @@ class QuestionsController < ApplicationController
 
     def show
         @question = Question.find(params[:id])
+        @answer = Answer.new
     end
 
     def edit
@@ -32,10 +35,25 @@ class QuestionsController < ApplicationController
         end
     end
 
+    def destroy
+        question = Question.find(params[:id])
+        question.destroy
+        redirect_to action: :index
+    end
+
     private
      def question_params
-       params.require(:question).permit(:title, :body)
+        params.require(:question).permit(:title, :body)
+      end
+     def ensure_current_user
+        @question = Question.find_by(id: params[:id])
+        if @question.user_id != current_user.id
+            redirect_to("/questions/#{@question.id}")
+        end
     end
+    
+
+
 
 
 end

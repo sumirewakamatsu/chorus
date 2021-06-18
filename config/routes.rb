@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
  resources :users, only: [:show, :index]
  
- resources :questions
- resources :answers
+ resources :questions do
+ resources :answers, only: [:create]
+ end
+
 end
