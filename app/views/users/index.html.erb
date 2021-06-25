@@ -2,7 +2,7 @@
 <div class="user-container">
   <% @users.each do |t| %>
     <div class="user">
-      <%= t.email %>
+      <%= t.name %>
      <%= link_to "詳細へ", user_path(t.id) %> 
     </div>
   <% end %>

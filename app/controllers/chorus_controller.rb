@@ -47,7 +47,7 @@ class ChorusController < ApplicationController
 
     private
     def choru_params
-        params.require(:choru).permit(:about, :image)
+        params.require(:choru).permit(:about, :image, :address, :date, :name)
 
     end
 

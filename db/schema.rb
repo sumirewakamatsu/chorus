@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_18_123826) do
+ActiveRecord::Schema.define(version: 2021_06_21_142607) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "user_id"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2021_06_18_123826) do
   end
 
   create_table "chorus", force: :cascade do |t|
-    t.datetime "date"
     t.string "address"
     t.string "name"
     t.text "about"
@@ -31,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_06_18_123826) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
+    t.string "date"
   end
 
   create_table "questions", force: :cascade do |t|

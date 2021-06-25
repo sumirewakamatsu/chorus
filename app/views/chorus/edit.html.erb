@@ -1,8 +1,25 @@
 <h1>投稿を編集する！</h1>
+<div class="post-container">
+ <%= form_for @choru do |f| %>
+  <div>
+    <%= f.label :name, "タイトル" %><br>
+    <%= f.text_field :name %>
+   </div>
+ <div>
+   <%= f.label :address, "開催場所" %><br>
+   <%= f.text_field :address %>
+ </div>
+ <div>
+    <%= f.label :date, "開催日時" %><br>
+    <%= f.text_field :date %>
+  </div>
+</div>
 
-<%= form_for @choru do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :about, :size => 140 %> 
+<%= f.label :演奏内容 %>
+        <br>
+        <%= f.text_field :about,size: 140%>
+        <br>
+
    
     <div class="field">
      <%= f.label :image %>
