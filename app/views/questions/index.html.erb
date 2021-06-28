@@ -3,13 +3,12 @@
  <div class="questions-container">
    <% @questions.each do |t| %>
      <div class="question">
-       <%= t.user.name %>
+       <div><%= t.user.name %></div>
        <div><%= t.title %></div>
-       <%= t.body %>
+       <div><%= t.body %></div>
        <%= link_to "詳細へ", question_path(t.id) %>
-       <%= link_to "編集する", edit_question_path(t.id) %>
-       <%= button_to "削除する", question_path(t.id), method: :delete %>
      </div>
    <% end %> 
  </div>
 
+ 

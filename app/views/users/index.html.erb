@@ -2,7 +2,8 @@
 <div class="user-container">
   <% @users.each do |t| %>
     <div class="user">
-      <%= t.name %>
+      <div><%= t.name %></div>
+      <div><%= image_tag t.image_url, size: "250x200" if t.image? %></div>
      <%= link_to "詳細へ", user_path(t.id) %> 
     </div>
   <% end %>

@@ -5,6 +5,9 @@
  <p><%= @question.body %></p>
 </div>
 
+<div> <%= link_to "投稿を編集する", edit_question_path(@question.id) %></div>
+
+
 <div>
  <%= form_with(model: [@question, @answer], local: true) do |f| %>
     <div>
@@ -23,4 +26,3 @@
 </div>
 
 <%= link_to "質問一覧に戻る", questions_path %>
-<%= link_to "編集する", edit_question_path(@question.id) %>
