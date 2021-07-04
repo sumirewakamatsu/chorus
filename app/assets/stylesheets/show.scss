@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 20px;
+  }
+  .box1{
+    margin:2em 0;
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px #ffcb8a;
+    border-radius: 3px 0 3px 0;
+  }
+  .box1:before,.box1:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px #ffcb8a;
+    border-radius: 50%;
+}
+.box1:after {
+    top:-12px;
+    left:-12px;
+}
+.box1:before {
+    bottom:-12px;
+    right:-12px;
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+  
+  .box {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .text {
+    text-align: right;
+  }
+  
+  h3 {
+    font-size: 21px;
+    margin: 0;
+  }
+  
+  .pict {
+    width: 30%;
+    margin-left: 3%;
+  }
+  
+  .pict img {
+    width: 100%;
+    height:auto;
+  }

@@ -1,29 +1,48 @@
-<h1>詳細ページ</h1>
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="UTF-8">
+ <%= stylesheet_link_tag 'show', :media => "all" %>
+ <title>HelloUserShow</title>
+ </head>
+
+<body>
+ <h1>詳細ページ</h1>
 
 <% if current_user.id == @user.id %>
   <%= link_to "プロフィールを編集する", edit_user_registration_path %>
   <%= link_to "新規投稿する", :controller => "chorus", :action => "new" %>
 <% end %>
 
-<p>団体名 : <%= @user.name %></p>
-<p>プロフィール : <%= @user.profile %></p>
-<div><%= image_tag @user.image_url, size: "250x200" if @user.image? %></div>
+<div class="box1">
+  <div class="text">
+     <h3>団体名 : <%= @user.name %></h3>
+    <p>プロフィール : <%= @user.profile %></p>
+  </div>
+  <%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+</div>
+ 
 
 <h2>ユーザーの投稿一覧</h2>
 <% @user.chorus.each do |t| %>
-  <div>
-  <div><%= image_tag t.image_url, size: "250x200" if t.image? %></div>
- <div><%= t.name %></div>
-  <div><%= t.address %></div>
-  <div><%= t.date %></div>
-  <div>
-   <%= t.about %>
+  <div class="box">
+   <div class="text">
+     <div><%= t.name %></div>
+      <div><%= t.address %></div>
+      <div><%= t.date %></div>
+       <%= t.about %>
   </div>
+  <div><%= image_tag t.image_url, size: "250x200" if t.image? %></div>
+</div>
+
   <% if current_user.id == @user.id %>
    <%= link_to "投稿を編集する", edit_choru_path(t.id) %>
    <%= link_to "削除する", choru_path(t.id), method: :delete %>
   <% end %>
 
 <% end %>
+
+</body>
+</html>
 
 

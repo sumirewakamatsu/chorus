@@ -1,10 +1,18 @@
-<h1>編集結果 </h1>
+<%= stylesheet_link_tag 'show', :media => "all" %>
+
+<h1>プレビューページ </h1>
 <h3>投稿内容</h3>
-　<div class="about">
+　<div class="choru">
+
+    <p><%= @choru.name %></p>
+    <p><%= @choru.address %></p>
+    <p><%= @choru.date %></p>
   　<p><%= @choru.about %></p>
-  　<p><%= @choru.created_at %></p>
+  　<p><% @choru.created_at %></p>
+   <div><%= image_tag @choru.image_url, size: "250x200" if @choru.image? %></div>
 　</div>
 
 
+
+
 <%= button_to "投稿する", users_path %>
-<%= button_to "下書きに戻る", edit_choru_path(@choru.id) %>

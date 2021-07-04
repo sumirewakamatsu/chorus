@@ -1,18 +1,16 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
 <h1>投稿を編集する！</h1>
 <div class="post-container">
  <%= form_for @choru do |f| %>
-  <div>
-    <%= f.label :name, "タイトル" %><br>
-    <%= f.text_field :name %>
-   </div>
- <div>
-   <%= f.label :address, "開催場所" %><br>
-   <%= f.text_field :address %>
- </div>
- <div>
-    <%= f.label :date, "開催日時" %><br>
-    <%= f.text_field :date %>
-  </div>
+  <label class="ef">
+   <label class="ef">
+     <input type="text" placeholder="コンサート名">
+     <input type="text" placeholder="開催場所">
+    <input type="text" placeholder="開催日時">
+     <input type="text" placeholder="演奏内容">
+  </label>
+    
 </div>
 
 <%= f.label :演奏内容 %>

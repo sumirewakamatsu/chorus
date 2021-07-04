@@ -6,32 +6,18 @@
 <div class="post-container">
     <p class="title">投稿フォーム</p>
     <%= form_for(@choru, :url => { controller:'chorus', action:'create'})do |f| %>
-    <div>
-      <%= f.label :name, "タイトル" %><br>
-      <%= f.text_field :name %>
-    </div>
-    <div>
-     <%= f.label :address, "開催場所" %><br>
-      <%= f.text_field :address %>
-    </div>
-    <div>
-     <%= f.label :date, "開催日時" %><br>
-     <%= f.text_field :date %>
-    </div>
-
-
-
-    <%= f.label :演奏内容 %>
-        <br>
-        <%= f.text_field :about,size: 140%>
-        <br>
+  <label class="ef">
+    <input type="text" placeholder="コンサート名">
+    <input type="text" placeholder="開催場所">
+    <input type="text" placeholder="開催日時">
+    <input type="text" placeholder="演奏内容">
+   </label>
         <div class="field">
           <%= f.label :image %>
           <%= f.file_field :image %>
        </div>
         
     <%= f.submit "送信"%>
-    <br>
     <% end %>
 </div>
 
