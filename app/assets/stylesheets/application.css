@@ -3,17 +3,25 @@
   margin: 0;
 }
 body {
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
-    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-family: Miltonian Tattoo;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 57px;
+text-align: center;
+
+color: #FFFFFF;
 }
 header {
-  background-color: #71d15e;
-  height: 80px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #4E8A69;
+  position: absolute;
+  width: 1440px;
+  height: 83px;
+  left: 0px;
+  top: 0px;
 }
+
+
 header a {
   color: white; 
   text-decoration: none; 

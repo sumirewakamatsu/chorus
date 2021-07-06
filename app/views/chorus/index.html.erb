@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-<style>
- body{
-     color: grey;
-     font-size: 15px
- }
-p{
-    color:orange;
-}
-.main{
-    color:red;
-}
-.center{
-    text-align: center;
-}
-.right{
-    text-arign: right;
-}
-</style>
 <head>
   <meta charset="UTF-8">
   <title>ようこそ、歌うたいの広場へ</title>
 </head>
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
 <body>
-  <div id="headline">
-  <h1>くちびるに歌を、</h1>
-  <p>コンビニの棚は空っぽ</p>
+<div class="container">
+  <div class="header"></div>
+  <div class="left">
+    <%= image_tag 'pexels-thirdman-6193774.jpg', class:'center', size: '320x606' %>
+    <p>うたを愛するすべての人へ</p>
+  <p>このサイトは全国の合唱人、歌好きのために作りました。いつの時代も歌が、心揺らす音楽が、私たちの味方です</p>
   </div>
-  <div class="main">
-  <h2>これは見出しです。</h2>
-  <p class="center">中央寄せの文</p>
-  <p class="right">右寄せの文</p>
-  <p>これは<span class="light">例</span>です。</p>
+  <div class= "center">
+    <%= image_tag 'pexels-elina-sazonova-3971983.jpg', class:'center', size: '320x606' %>
+    <p>知らなかった団体との出会い</p>
+  <p>全国には、多種多様な合唱団があります。あなたの「好き」がきっとたくさん見るかるはず</p>
+  </div>
+  <div class= "right">
+    <%= image_tag 'pexels-cottonbro-7520369.jpg', class: 'right', size: '320x606' %>
+    <p>歌を究める</p>
+  <p>オンライン練習や発声方法など、世代を超えた合唱人の為の、合唱人によるプラットフォーム</p>
+  </div>
+</div>
   
-  </div>
 </body>
 </html>
