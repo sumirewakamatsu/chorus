@@ -7,42 +7,55 @@
  </head>
 
 <body>
- <h1>詳細ページ</h1>
+  
 
-<% if current_user.id == @user.id %>
-  <%= link_to "プロフィールを編集する", edit_user_registration_path %>
-  <%= link_to "新規投稿する", :controller => "chorus", :action => "new" %>
-<% end %>
-
-<div class="box1">
+<div class= box1>
   <div class="text">
-     <h3>団体名 : <%= @user.name %></h3>
-    <p>プロフィール : <%= @user.profile %></p>
+     <h3>Name <%= @user.name %></h3>
+    <p><%= @user.profile %></p>
   </div>
-  <%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+  <div class="user-image">
+   <%= image_tag @user.image_url, size: "300x240" if @user.image? %>
+  </div>
+  <div class= link1>
+   <% if current_user.id == @user.id %>
+    <%= link_to "プロフィールを編集する", edit_user_registration_path %>
+   <% end %>
+  </div>
 </div>
- 
 
-<h2>ユーザーの投稿一覧</h2>
+
 <% @user.chorus.each do |t| %>
-  <div class="box">
+  <div class="box2">
    <div class="text">
-     <div><%= t.name %></div>
-      <div><%= t.address %></div>
-      <div><%= t.date %></div>
-       <%= t.about %>
+     <div>
+     <h6>Title</h6>"<%= t.name %></div>
+      <div>
+      <h6>Address</h6><%= t.address %></div>
+      <div>
+      <h6>Date</h6><%= t.date %></div>
+       <h6>About</h6><%= t.about %>
   </div>
-  <div><%= image_tag t.image_url, size: "250x200" if t.image? %></div>
-</div>
+  <div><%= image_tag t.image_url, size: "250x354" if t.image? %></div>
 
-  <% if current_user.id == @user.id %>
-   <%= link_to "投稿を編集する", edit_choru_path(t.id) %>
-   <%= link_to "削除する", choru_path(t.id), method: :delete %>
-  <% end %>
 
+  <div class="link2">
+    <% if current_user.id == @user.id %>
+      <%= link_to "投稿を編集する", edit_choru_path(t.id) %>
+      <%= link_to "削除する", choru_path(t.id), method: :delete %>
+    <% end %>
+  </div>
 <% end %>
 
-</body>
+<div class= "btn-circle-3d" > 
+<% if current_user.id == @user.id %>
+ <%= link_to "新規投稿", :controller => "chorus", :action => "new" %>
+<% end %>
+<%= link_to "投稿一覧", users_path %>
+　<%= link_to "質問一覧", questions_path %>
+</div>
+
+ </body>
 </html>
 
 

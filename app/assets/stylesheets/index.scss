@@ -1,11 +1,38 @@
 .container{
   display: flex;
   justify-content: space-between;
-  margin-top: 200px;
+  margin-top: 150px;
   height: 606px
   
 }
 p{
   width:320px;
- ;
+}
+
+.button{
+  display: flex ;
+  ;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.btn-flat-simple {
+  width: 330px;
+  width: 330px;
+  height: 72px;
+  left: 825px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #396a70;
+  background: #ECECEC;
+  transition: .4s;
+  text-align:center;
+  line-height: 72px;
+}
+
+.btn-flat-simple:hover {
+  background: #396a70;
+  color: white;
 }

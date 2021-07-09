@@ -3,8 +3,8 @@
 <head>
  <meta charset="utf-8">
  <title>user-index</title>
- <link rel="stylesheet" type="text/css" href="./index.css">
  </head>
+ <%= stylesheet_link_tag 'users', :media => "all" %>
 
  <body>
   <h1> 団体一覧　</h1>
@@ -13,7 +13,7 @@
      <div class="user">
       <div><%= t.name %></div>
       <%= link_to user_path(t.id) do %> 
-       <%= image_tag t.image_url, size: "250x200" if t.image? %>
+       <%= image_tag t.image_url, size: "235x155" if t.image? %>
        <% end %>
      
     </div>
