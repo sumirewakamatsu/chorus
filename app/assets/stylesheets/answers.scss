@@ -1,3 +1,25 @@
-// Place all the styles related to the answers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.title{
+    position: fixed;
+    left: 153px;
+}
+
+.body{
+    position: fixed;
+    top:164px;
+    left: 350px; 
+}
+
+.answer{
+    position: fixed;
+    left:153px;
+    top: 200px;
+    border-bottom: 2px, solid, #3b9177;
+}
+

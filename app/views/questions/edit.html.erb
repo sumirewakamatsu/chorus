@@ -1,5 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>投稿編集</title>
+</head>
+<%= stylesheet_link_tag 'new', :media => "all" %>
+<body>
+
+<div class="post-container">
 <%= form_for @question do |f| %>
-    <%= f.label :body %>
-    <%= f.text_field :body, :size => 140 %> 
+    <label class= "ef">
+  　　<input type="text" placeholder="質問内容">
+    </label> 
     <%= f.submit "編集する" %>
 <% end %>
+
+</body>
+</html>
+
+

@@ -46,13 +46,18 @@
   </div>
 <% end %>
 
-<div class= "btn-circle-3d" > 
+<div class= "btn-circle-flat" > 
 <% if current_user.id == @user.id %>
  <%= link_to "新規投稿", :controller => "chorus", :action => "new" %>
 <% end %>
+</div>
 
-<li><%= link_to "投稿一覧", users_path %></li>
-　<li><%= link_to "質問一覧", questions_path %></li>
+<div class= "btn-circle-flat2" > 
+<%= link_to "投稿一覧", users_path %>
+<div>
+
+<div class= "btn-circle-flat3" > 
+<%= link_to "質問一覧", questions_path %>
 </div>
 
  </body>

@@ -9,11 +9,10 @@ p{
   width:320px;
 }
 
-.button{
-  display: flex ;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
+.btn-flat{
+  position:fixed ;
+  bottom: 16px;
+  left: 270px;
   width: 330px;
   height: 72px;
   font-weight: bold;
@@ -25,7 +24,27 @@ p{
   line-height: 72px;
 }
   
-.button:hover {
+.btn-flat:hover {
+  background: #6ecfdb;
+  color: white;
+}
+
+.btn-flat2{
+  position:fixed ;
+  bottom: 16px;
+  right: 270px;
+  width: 330px;
+  height: 72px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #6ecfdb;
+  background: #ECECEC;
+  transition: .4s;
+  text-align:center;
+  line-height: 72px; 
+}
+
+.btn-flat2:hover {
   background: #6ecfdb;
   color: white;
 }

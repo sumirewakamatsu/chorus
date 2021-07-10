@@ -1,14 +1,16 @@
-<h>質問内容</h>
+<%= stylesheet_link_tag 'answers', :media => "all" %>
+
 <h3>質問詳細</h3>
 <div class= "question" >
- <p><%= @question.title %></p>
- <p><%= @question.body %></p>
+ <div class="title">
+ <%= @question.title %></div>
+ <div class="body"><%= @question.body %></div>
 </div>
 
-<div> <%= link_to "投稿を編集する", edit_question_path(@question.id) %></div>
+<a><%= link_to "投稿を編集する", edit_question_path(@question.id) %></a>
 
 
-<div>
+<div class="answer">
  <%= form_with(model: [@question, @answer], local: true) do |f| %>
     <div>
      <%= f.label :body, "回答" %><br>
@@ -18,7 +20,6 @@
   <% end %>
 </div>
 
-<hr>
 <div>
  <% @question.answers.each do |answer| %>
     <p><%= answer.body %></p>
