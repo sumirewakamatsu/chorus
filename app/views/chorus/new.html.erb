@@ -6,29 +6,37 @@
 </head>
 <%= stylesheet_link_tag 'new', :media => "all" %>
 
-<body>
-<div class="post-container">
-    <%= form_for(@choru, :url => { controller:'chorus', action:'create'})do |f| %>
-       <div class="cp_inptx">
-         <label class="ef">
-           <input type="text" placeholder="コンサート名">
-           <input type="text" placeholder="開催場所">
-           <input type="text" placeholder="開催日時">
-           <input type="text" placeholder="演奏内容">
-        </label>
-       </div>
-   
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
 
-        <div class="field">
-          <%= f.label :image %>
-          <%= f.file_field :image %>
-       </div> 
-       <%= f.submit "送信" %>
+    </div>
+    <div class="col-md-10">
+      <h1 class="text-center font-weight-bold pt-5">新規投稿 </h1>
+<div class="post-container pt-3">
+    <%= form_for(@choru, :url => { controller:'chorus', action:'create'})do |f| %>
+           <p><%= f.label:"コンサート名" %> <%= f.text_field :name, class: "col-md-12" %></p>
+           <p><%= f.label:"開催場所" %> <%= f.text_field :address, class: "col-md-12" %></p>
+           <p><%= f.label:"開催日時" %> <%= f.text_field :date, class: "col-md-12" %></p>
+           <p><%= f.label:"演奏内容" %> <%= f.text_area :about, class: "col-md-12" %></p>
+   
+           <div class="field">
+             <%= f.label :image %>
+              <%= f.file_field :image %>
+            </div>
+    <div class="actions pt-3">       
+       <%= f.submit "送信", class:"btn btn-primary" %>
+    </div>
     <% end %>  
+</div>
+<div class="col-md-1">
+
+    </div>
+  </div>
 </div>
 
 
-<%= link_to "投稿一覧に戻る", chorus_path %>
-
-</body>
+<div class= "btn-circle-flat" > 
+ <%= link_to "投稿一覧に戻る", chorus_path %>
+</div>
 </html>

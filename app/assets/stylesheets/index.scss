@@ -1,7 +1,7 @@
 .container{
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+  margin-top: 50px;
   height: 606px
   
 }
@@ -10,9 +10,9 @@ p{
 }
 
 .btn-flat{
-  position:fixed ;
-  bottom: 16px;
-  left: 270px;
+  position:absolute;
+  bottom: -40%;
+  left: 200px;
   width: 330px;
   height: 72px;
   font-weight: bold;
@@ -30,9 +30,9 @@ p{
 }
 
 .btn-flat2{
-  position:fixed ;
-  bottom: 16px;
-  right: 270px;
+  position:absolute ;
+  bottom: -40%;
+  right: 200px;
   width: 330px;
   height: 72px;
   font-weight: bold;

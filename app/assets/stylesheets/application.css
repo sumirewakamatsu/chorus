@@ -1,66 +1,42 @@
-* {
-  padding: 0;
+.m-0{
   margin: 0;
 }
-body {
-  font-family: Miltonian Tattoo;
-font-style: normal;
-font-weight: normal;
-font-size: 48px;
-line-height: 57px;
-text-align: center;
 
-color: #FFFFFF;
-}
-header {
-  background-color: #4E8A69;
+.navbar-dark .navbar-brand {
+  color: #fff;
+  top: 15%;
   position: absolute;
-  width: 1440px;
-  height: 70px;
-  left: 0px;
-  top: 0px;
 }
 
-
-header a {
-  color: white; 
-  text-decoration: none; 
-}
-header h1 {
-  color: white;
-  margin-left: 20px;
-}
-.header-list {
-  display: flex;
-  justify-content: right;
-}
-header ul {
-  display: flex;
-}
-header li {
-  list-style: none;
-  margin-right: 40px;
-}
-.container {
-  width: 80%;
-  margin: 20px auto;
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 10%;
 }
 
-input, textarea {
-  box-sizing: border-box;
-  width: 400px;
-  padding: 6px;
+.d-block{
+  display: block;
 }
 
-input[type="submit"] {
-  background-color: #74c6fd;
-  border-radius: 5px;
-  color: white;
-  padding: 10px;
+.ml-auto{
+  margin-left: auto;
+}
+
+.ml-4{
+  margin-left: 1.5rem;
+}
+
+.text-center{
   text-align: center;
-  width: 150px;
 }
 
-textarea {
-  height: 120px;
+.bg-main{
+  height: 50px;
+  background-color: #54be5d;
 }
