@@ -6,23 +6,33 @@
 </head>
 <%= stylesheet_link_tag 'new', :media => "all" %>
 
-<body>
-<div class="post-container">
- <%= form_for @choru do |f| %>
-  <label class="ef">
-     <input type="text" placeholder="コンサート名">
-     <input type="text" placeholder="開催場所">
-    <input type="text" placeholder="開催日時">
-     <input type="text" placeholder="演奏内容">
-  </label>
-  <div class="field">
-     <%= f.label :image %>
-     <%= f.file_field :image %>
-   </div>
-    
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <h1 class="text-center font-weight-bold pt-5">投稿を編集する</h1>
+<div class="post-container pt-3">
+    <%= form_for @choru do |f| %>
+           <p><%= f.label:"コンサート名" %> <%= f.text_field :name, class: "col-md-12 form-control" %></p>
+           <p><%= f.label:"開催場所" %> <%= f.text_field :address, class: "col-md-12 form-control" %></p>
+           <p><%= f.label:"開催日時" %> <%= f.text_field :date, class: "col-md-12 form-control" %></p>
+           <p><%= f.label:"演奏内容" %> <%= f.text_area :about, class: "col-md-12 form-control" %></p>
+   
+           <div class="field">
+             <%= f.label :image %>
+              <%= f.file_field :image %>
+            </div>
+
+            <div class= "btn-circle-flat" > 
+              <%= f.submit "編集する" %>
+           </div>
+    <% end %>  
+</div>
+<div class="col-md-1">
+
+    </div>
+  </div>
 </div>
 
-<%= f.submit "編集する" %>
-
-</body>
-</html>

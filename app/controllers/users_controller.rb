@@ -34,5 +34,10 @@ class UsersController < ApplicationController
         redirect_to action: :index
     end
     
+    private
+    def choru_params
+        params.require(:choru).permit(:about, :image, :address, :date, :name)
+
+    end
 
 end
