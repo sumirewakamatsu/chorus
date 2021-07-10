@@ -1,24 +1,34 @@
-<h1>Join our Concerts!</h1>
-<h3>新規投稿</h3>
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>新規投稿</title>
+</head>
 <%= stylesheet_link_tag 'new', :media => "all" %>
 
+<body>
 <div class="post-container">
-    <p class="title">投稿フォーム</p>
     <%= form_for(@choru, :url => { controller:'chorus', action:'create'})do |f| %>
-  <label class="ef">
-    <input type="text" placeholder="コンサート名">
-    <input type="text" placeholder="開催場所">
-    <input type="text" placeholder="開催日時">
-    <input type="text" placeholder="演奏内容">
-   </label>
+       <div class="cp_inptx">
+         <label class="ef">
+           <input type="text" placeholder="コンサート名">
+           <input type="text" placeholder="開催場所">
+           <input type="text" placeholder="開催日時">
+           <input type="text" placeholder="演奏内容">
+        </label>
+       </div>
+   
+
         <div class="field">
           <%= f.label :image %>
           <%= f.file_field :image %>
-       </div>
-        
-    <%= f.submit "送信"%>
-    <% end %>
+       </div> 
+       <%= f.submit "送信" %>
+    <% end %>  
 </div>
 
+
 <%= link_to "投稿一覧に戻る", chorus_path %>
+
+</body>
+</html>

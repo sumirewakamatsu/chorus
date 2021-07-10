@@ -1,13 +1,26 @@
 .post-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 132px 231px 74px 134px;
+  width: 1075px;
+  height: 818px;
+  margin-top: 100px;
+  background: rgba(141, 192, 214, 0.5);
+}
+  
+.cp_iptxt {
+	position: relative;
 	width: 80%;
 	margin: 40px 3%;
-  }
-  .title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
+  margin-top: 100px;
+}
+
+.ef{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
   input[type="text"] {
     font: 15px/24px sans-serif;
 	box-sizing: border-box;
@@ -20,11 +33,6 @@
 	border-radius: 4px;
   }
 
-  .ef input[type='text']:focus {
-    border: 1px solid #da3c41;
-    outline: none;
-    box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
-  }
   
   input[type="submit"] {
     width: 200px;

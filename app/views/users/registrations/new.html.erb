@@ -1,29 +1,36 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+
+    <h1 class="text-center font-weight-bold pt-5">Sign up</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= render "users/shared/error_messages", resource: resource %>
 
-<div class="field">
+<div class="field pt-3">
   <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true %>
+  <%= f.text_field :name, autofocus: true, class: "col-md-12 form-control" %>
 </div>
 
-  <div class="field">
+  <div class="field pt-3">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"col-md-12 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="field pt-3">
+    <%= f.label :パスワード %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class:"col-md-12 form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="field pt-3">
+    <%= f.label :パスワードを確認 %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"col-md-12 form-control" %>
   </div>
 
   <div class="field">
@@ -31,9 +38,16 @@
     <%= f.file_field :image %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions pt-3">
+    <%= f.submit "Sign up", class:"btn btn-primary" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+
+</div>
+<div class="col-md-1">
+
+    </div>
+  </div>
+</div>

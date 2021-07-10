@@ -36,8 +36,7 @@
       <h6>Date</h6><%= t.date %></div>
        <h6>About</h6><%= t.about %>
   </div>
-  <div><%= image_tag t.image_url, size: "250x354" if t.image? %></div>
-
+  <div class= "image"><%= image_tag t.image_url, size: "250x354" if t.image? %></div>
 
   <div class="link2">
     <% if current_user.id == @user.id %>
@@ -51,8 +50,9 @@
 <% if current_user.id == @user.id %>
  <%= link_to "新規投稿", :controller => "chorus", :action => "new" %>
 <% end %>
-<%= link_to "投稿一覧", users_path %>
-　<%= link_to "質問一覧", questions_path %>
+
+<li><%= link_to "投稿一覧", users_path %></li>
+　<li><%= link_to "質問一覧", questions_path %></li>
 </div>
 
  </body>
