@@ -9,9 +9,9 @@
 <body>
   
 
-<div class= box1>
+<div class= "box1">
   <div class="text">
-     <h3>Name <%= @user.name %></h3>
+     <h5>Name:<%= @user.name %></h5>
     <p><%= @user.profile %></p>
   </div>
   <div class="user-image">
@@ -26,30 +26,34 @@
 
 
 <% @user.chorus.each do |t| %>
-  <div class="box2">
-   <div class="text">
-     <div>
-     <h6>Title</h6>"<%= t.name %></div>
-      <div>
-      <h6>Address</h6><%= t.address %></div>
-      <div>
-      <h6>Date</h6><%= t.date %></div>
-       <h6>About</h6><%= t.about %>
-  </div>
-  <div class= "image"><%= image_tag t.image_url, size: "250x354" if t.image? %></div>
+  <div class="post">
+     <div class="text2">
+        <p><%= t.name %></p>
+        <p><%= t.address %></p>
+        <p><%= t.date %></p>
+        <p><%= t.about %></p>
+      </div>
+    <div class="main">
+       <%= image_tag t.image_url, size: "250x354" if t.image? %></div>
+      </div>
 
-  <div class="link2">
-    <% if current_user.id == @user.id %>
-      <%= link_to "投稿を編集する", edit_choru_path(t.id) %>
-      <%= link_to "削除する", choru_path(t.id), method: :delete %>
-    <% end %>
+    <div class="link2">
+      <% if current_user.id == @user.id %>
+        <%= link_to "投稿を編集する", edit_choru_path(t.id) %>
+        <%= link_to "削除する", choru_path(t.id), method: :delete %>
+      <% end %>
+    </div>
   </div>
 <% end %>
+
+
+
+
 
 <div class= "btn-circle-flat" > 
-<% if current_user.id == @user.id %>
- <%= link_to "新規投稿", :controller => "chorus", :action => "new" %>
-<% end %>
+  <% if current_user.id == @user.id %>
+    <%= link_to "新規投稿", :controller => "chorus", :action => "new" %>
+  <% end %>
 </div>
 
  </body>

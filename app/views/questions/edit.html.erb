@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>投稿編集</title>
-</head>
-<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<%= stylesheet_link_tag 'new', :media => "all" %>
 
-<div class="post-container">
-<%= form_for @question do |f| %>
-    
-<%= f.submit "編集する" %>
-<% end %>
+<div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
 
-</body>
-</html>
+    </div>
+    <div class="col-md-10">
+      <h1 class="text-center font-weight-bold pt-5">質問を編集する</h1>
+<div class="post-container pt-3">
+　　　<%= form_for @question do |f| %>
+           <p><%= f.label:"タイトル" %> <%= f.text_field :title, class: "col-md-12 form-control" %></p>
+           <p><%= f.label:"内容" %> <%= f.text_area :body, class: "col-md-12 form-control" %></p>
+   
+            <div class= "btn-circle-flat" > 
+              <%= f.submit "編集する" %>
+           </div>
+    <% end %>  
+</div>
+<div class="col-md-1">
+
+    </div>
+  </div>
+</div>
+
+
+
+
 
 

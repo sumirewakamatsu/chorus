@@ -1,35 +1,71 @@
 .box1{
   display: flex;
- flex-direction: row-reverse;
-  justify-content: space-evenly;
-  margin-top: 150px;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap; 
+  margin-top: 70px;
   height: 300px;
   border-bottom: 2px solid #000;
   }
 
-  .box2{
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    margin-top: 100px;
-  }
-
+.text{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3em;
+}
+.user-image{
+  width: 50%;
+  text-align: center; 
+}
  .link1{
    position: absolute;
    width: 288px;
    height: 47px;
    left: 872px;
-   top: 399px;
+   top: 370px;
  }
  
- .link2{
-  position: absolute;
-  width: 127px;
-  height: 50px;
-  left: 872px;
-  top: 879px;
-  }
+ .post{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 90px;
+  flex-direction: row-reverse;
+ }
+ .main{
+   width: 50%;
+   text-align: center;
+ }
+ .text2{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3em;
+  background: #eee;
+ }
 
+ .text p + p {
+  margin-top: 1em;
+}
+
+ .link2{
+   text-align: right;
+ }
+
+ 
+
+ h3{
+  margin-top: 70px;
+  text-align: center;
+ }
+ 
+ 
+ 
   .btn-circle-flat {
     position:fixed;
     bottom: 16px;

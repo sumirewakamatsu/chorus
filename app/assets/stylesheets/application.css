@@ -1,35 +1,46 @@
-.m-0{
+* {
+  padding: 0;
   margin: 0;
 }
-
-.navbar-dark .navbar-brand {
-  color: #fff;
-  top: 15%;
-  position: absolute;
+body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+header {
+  background-color: #1ca0ec;
+  height: 80px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  color: white; 
+  text-decoration: none; 
+}
+header h1 {
+  color: white;
+  margin-left: 20px;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+}
+header ul {
+  display: flex;
+}
+header li {
+  list-style: none;
+  margin-right: 40px;
 }
 
-.nav-item{
-  color: #fff;
-}
-.d-block{
-  display: block;
-  color: #fff;
-}
 
-.ml-auto{
-  margin-left: auto;
-}
-
-.ml-4{
-  margin-left: 1.5rem;
-}
-
-.text-center{
+footer {
+  color: white;
+  height: 30px;
+  background-color: rgb(40, 192, 238);
+  bottom: 0;
+  width: 100%;
+  position: fixed;
   text-align: center;
-  color: #fff;
-}
-
-.bg-main{
-  height: 50px;
-  background-color: #54be5d;
 }

@@ -1,18 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+
 <%= stylesheet_link_tag 'show', :media => "all" %>
 
-<h1>プレビューページ </h1>
-<h3>投稿内容</h3>
-　<div class="choru">
+ <h3>投稿内容</h3>
 
+　<div class="post">
+    <div class= "text2">
     <p><%= @choru.name %></p>
     <p><%= @choru.address %></p>
     <p><%= @choru.date %></p>
   　<p><%= @choru.about %></p>
   　<p><% @choru.created_at %></p>
-   <div><%= image_tag @choru.image_url, size: "250x200" if @choru.image? %></div>
+  </div>
+  <div class= "main">
+   <%= image_tag @choru.image_url, size: "250x354" if @choru.image? %>
 　</div>
+</div>
 
-
-
-
-<%= button_to "投稿する", users_path %>
+<div class= "btn-circle-flat">
+ <%= link_to "投稿する", :controller => "users", :action => "index" %>
+</div>
+  
+  
