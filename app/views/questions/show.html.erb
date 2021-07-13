@@ -1,12 +1,11 @@
-
+<%= stylesheet_link_tag 'answers', :media => "all" %>
+<body>
 <div class="container">
   <div class="row">
     <div class="col-md-1">
    
     </div>
     <div class="col-md-10">
-
-<%= stylesheet_link_tag 'answers', :media => "all" %>
 
 <h1 class="text-center font-weight-bold" pt-5>質問詳細</h1>
 
@@ -22,7 +21,7 @@
 <div class="answer pt-3">
  <%= form_with(model: [@question, @answer], local: true) do |f| %>
     <div>
-     <%= f.label :body, "回答" %><br>
+     <br><%= f.label :body, "回答" %></br>
      <%= f.text_area :body, class:"col-md-12 form-control" %>
     </div>
     <div class="action pt-3">
@@ -37,11 +36,12 @@
   <% end %>
 </div>
 
-<div class="btn-circle-flat">
-  <%= link_to "質問一覧に戻る", questions_path %>
+<div class="btn">
+  <a href="/questions" class="btn-circle-flat">質問一覧に戻る</a>
 </div>
 <div class="col-md-1">
 
     </div>
   </div>
 </div>
+</body>

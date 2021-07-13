@@ -17,11 +17,11 @@
   <div class="user-image">
    <%= image_tag @user.image_url, size: "300x240" if @user.image? %>
   </div>
-  <div class= link1>
+  <section>
    <% if current_user.id == @user.id %>
-    <%= link_to "プロフィールを編集する", edit_user_registration_path %>
+     <a href="/users/edit" class="btn_01">プロフィールを編集する</a>
    <% end %>
-  </div>
+  </section>
 </div>
 
 
@@ -50,9 +50,9 @@
 
 
 
-<div class= "btn-circle-flat" > 
+<div class="btn"> 
   <% if current_user.id == @user.id %>
-    <%= link_to "新規投稿", :controller => "chorus", :action => "new" %>
+    <a href="/chorus/new" class= "btn-circle-flat">新規投稿</a>
   <% end %>
 </div>
 

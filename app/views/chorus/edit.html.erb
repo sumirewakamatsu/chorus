@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<%= stylesheet_link_tag 'new', :media => "all" %>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -6,15 +6,15 @@
   <meta charset="UTF-8">
   <title>投稿編集</title>
 </head>
-<%= stylesheet_link_tag 'new', :media => "all" %>
 
+<body>
 <div class="container">
   <div class="row">
     <div class="col-md-1">
 
     </div>
     <div class="col-md-10">
-      <h1 class="text-center font-weight-bold pt-5">投稿を編集する</h1>
+      <h1 class="text-center font-weight-bold pt-5">Edit a post</h1>
 <div class="post-container pt-3">
     <%= form_for @choru do |f| %>
            <p><%= f.label:"コンサート名" %> <%= f.text_field :name, class: "col-md-12 form-control" %></p>
@@ -37,4 +37,6 @@
     </div>
   </div>
 </div>
+
+</body>
 

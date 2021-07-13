@@ -13,26 +13,34 @@
   </head>
  
   <body>
+  <% if user_signed_in? %>
     <header>
       <h1><%= link_to 'The singing square', chorus_path %></h1>
     <div class="header-list">
       <ul>
-          <li><%= link_to '団体一覧', users_path %></li>
-          <li><%= link_to '質問一覧', questions_path %><li>
-      
-          <% if user_signed_in? %>
-             <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:"nav-link text-center" %>
-           <% else %>
-             <%= link_to 'Sign up', new_user_registration_path, class:"nav-link text-center" %>
-             <%= link_to 'Log in', new_user_session_path, class:"nav-link text-center" %> 
-          <% end %>
+          <li><a href="/users">団体一覧</a></li>
+          <li><a href="/questions">質問一覧</a></li>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
       </ul>
     </div>
    </header>
 
-   <footer>
-     <p>Copyright © Sumire Wakamatsu All Rights Reserved.</p>
-    </footer>
+  <% else %>
+   <header>
+   <h1><%= link_to 'The singing square', chorus_path %></h1>
+   <div class="header-list">
+   <ul>
+         <li><a href="/users">団体一覧</a></li>
+         <li><a href="/questions">質問一覧</a></li>
+         <li><a href="/users/sign_up">Sign up</a></li>
+         <li><a href="/users/sign_in">Log in</a></li>
+       
+   </ul>
+ </div>
+</header>
+<% end %>
+
+   
    <main>
       <%= yield %>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -7,7 +7,7 @@ body {
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 header {
-  background-color: #1ca0ec;
+  background-color: #666666;
   height: 80px;
   font-weight: bold;
   display: flex;
@@ -28,6 +28,7 @@ header h1 {
 }
 header ul {
   display: flex;
+  justify-content: space-between;
 }
 header li {
   list-style: none;
@@ -35,15 +36,7 @@ header li {
 }
 
 
-footer {
-  color: white;
-  height: 30px;
-  background-color: rgb(40, 192, 238);
-  bottom: 0;
-  width: 100%;
-  position: fixed;
-  text-align: center;
-}
+
 .header-list{
   display: flex;
   flex-direction: row;

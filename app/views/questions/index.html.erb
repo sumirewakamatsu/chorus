@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag 'questions', :media => "all" %>
 
+<body>
 <div class="questions-container">
 <h3>質問投稿一覧</h3>
    <% @questions.each do |t| %>
@@ -17,9 +18,11 @@
    <% end %> 
  </div>
 
- <div class= "btn-circle-flat">
-  <%= link_to "新規投稿する", :controller => "questions", :action => "new" %>
+ <div class="btn">
+  <a href="/question/new" class="btn-circle-flat">新規投稿する</a>
  </div>
+
+ </body>
 
  
 
