@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<%= stylesheet_link_tag 'users', :media => "all" %>
+<body>
 <div class="container">
   <div class="row">
     <div class="col-md-1">
@@ -25,7 +25,7 @@
   <div class="field pt-3">
     <%= f.label :パスワード %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> characters minimum) パスワードは最小6文字です</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", class:"col-md-12 form-control" %>
   </div>
@@ -53,3 +53,4 @@
     </div>
   </div>
 </div>
+</body>

@@ -7,9 +7,11 @@
 <%= stylesheet_link_tag 'index', :media => "all" %>
 
 <body>
+
 <div class="loader-wrap">
   <div class="loader">Loading..♪</div>
 </div>
+
 <div class="container">
   <div class="header"></div>
   <div class="left">
@@ -30,20 +32,33 @@
 </div>
 
 
-
-
 <div class="btn">
-<div class= "btn-flat" > 
-  <%= link_to "新規登録",new_user_registration_path %>
+ <div class= "btn-flat" > 
+   <%= link_to "新規登録",new_user_registration_path %>
+ </div>
 </div>
 
 <div class= "btn-flat2" > 
   <%= link_to "ログイン",new_user_session_path %>
 </div>
 
-  
- 
+<script>
+$(function(){
+	var loader = $('.loader-wrap');
 
+	//ページの読み込みが完了したらアニメーションを非表示
+	$(window).on('load',function(){
+		loader.fadeOut();
+	});
+
+	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+	setTimeout(function(){
+		loader.fadeOut();
+	},3000);
+});
+</script>
+
+  
 </body>
 </html>
 

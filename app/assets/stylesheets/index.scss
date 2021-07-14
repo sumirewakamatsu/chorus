@@ -5,20 +5,20 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: rgb(133, 206, 166);
 }
 
 .loader,
 .loader:before,
 .loader:after {
-	background: #ffffff;
+	background: rgb(133, 206, 166);
 	-webkit-animation: load1 1s infinite ease-in-out;
 	animation: load1 1s infinite ease-in-out;
 	width: 1em;
 	height: 4em;
 }
 .loader {
-	color: #ffffff;
+	color: rgb(59, 94, 75);
 	text-indent: -9999em;
 	margin: 88px auto;
 	position: relative;
@@ -75,7 +75,8 @@ body{
 }
 .container{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-top: 50px;
   height: 570px;
   animation: fadeIn 3s ease 0s 1 normal;
