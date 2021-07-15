@@ -13,8 +13,8 @@
            <p><%= f.label:"タイトル" %> <%= f.text_field :title, class: "col-md-12 form-control" %></p>
            <p><%= f.label:"内容" %> <%= f.text_area :body, class: "col-md-12 form-control" %></p>
    
-            <div class= "btn-circle-flat" > 
-              <%= f.submit "編集する" %>
+            <div class= "actions pt-3" > 
+              <%= f.submit "編集する", class: "btn btn-primary" %>
            </div>
     <% end %>  
 </div>

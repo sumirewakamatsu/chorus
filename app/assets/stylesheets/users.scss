@@ -5,11 +5,16 @@ body{
 
 .user-container{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction:row ;
+    flex-wrap: wrap;
     margin-top: 130px;
+    margin-left: 40px;
     height: 606px;
     overflow: hidden;    
+}
+.user{
+    width: 30vw;
+
 }
 
 .user-container img{

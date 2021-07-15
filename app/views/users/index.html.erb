@@ -8,21 +8,23 @@
 
  <body>
   <div class= "title">
-  <h2>団体一覧</h2>
+   <h2>団体一覧</h2>
   </div>
+
   <div class="user-container">
-     <% @users.each do |t| %>
+    <% @users.each do |t| %>
      <div class="user">
-      <div><%= t.name %></div>
-      <div class="img">
+       <div><%= t.name %></div>
+       <div class="img">
         <%= link_to user_path(t.id) do %> 
-         <%= image_tag t.image_url, size: "235x155" if t.image? %>
-      </div>
+          <%= image_tag t.image_url, size: "255x155" if t.image? %>
+         <% end %>
+       </div>
       
-       <% end %>
-     
-    </div>
+      </div>
     <% end %>
-</div>
+ </div>
+
+
 </body>
 </html>
