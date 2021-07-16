@@ -8,10 +8,6 @@
 
 <body>
 
-<div class="loader-wrap">
-  <div class="loader">Loading..♪</div>
-</div>
-
 <div class="container">
   <div class="header"></div>
   <div class="left">
@@ -41,22 +37,6 @@
 <div class= "btn-flat2" > 
   <%= link_to "ログイン",new_user_session_path %>
 </div>
-
-<script>
-$(function(){
-	var loader = $('.loader-wrap');
-
-	//ページの読み込みが完了したらアニメーションを非表示
-	$(window).on('load',function(){
-		loader.fadeOut();
-	});
-
-	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-	setTimeout(function(){
-		loader.fadeOut();
-	},5000);
-});
-</script>
 
   
 </body>

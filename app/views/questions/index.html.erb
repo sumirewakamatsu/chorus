@@ -1,6 +1,11 @@
 <%= stylesheet_link_tag 'questions', :media => "all" %>
 
 <body>
+
+<div class="loader-wrap">
+  <div class="loader">Loading..♪</div>
+</div>
+
 <div class="questions-container">
 <h3>質問投稿一覧</h3>
    <% @questions.each do |t| %>
@@ -21,6 +26,22 @@
  <div class="btn">
   <a href="/question/new" class="btn-circle-flat">新規投稿する</a>
  </div>
+
+ <script>
+$(function(){
+	var loader = $('.loader-wrap');
+
+	//ページの読み込みが完了したらアニメーションを非表示
+	$(window).on('load',function(){
+		loader.fadeOut();
+	});
+
+	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+	setTimeout(function(){
+		loader.fadeOut();
+	},5000);
+});
+</script>
 
  </body>
 

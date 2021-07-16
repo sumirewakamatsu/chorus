@@ -7,6 +7,11 @@
  <%= stylesheet_link_tag 'users', :media => "all" %>
 
  <body>
+
+ <div class="loader-wrap">
+  <div class="loader">Loading..♪</div>
+</div>
+
   <div class= "title">
    <h2>団体一覧</h2>
   </div>
@@ -24,6 +29,22 @@
       </div>
     <% end %>
  </div>
+
+ <script>
+$(function(){
+	var loader = $('.loader-wrap');
+
+	//ページの読み込みが完了したらアニメーションを非表示
+	$(window).on('load',function(){
+		loader.fadeOut();
+	});
+
+	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+	setTimeout(function(){
+		loader.fadeOut();
+	},5000);
+});
+</script>
 
 
 </body>
