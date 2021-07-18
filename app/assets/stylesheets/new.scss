@@ -9,7 +9,7 @@ body{
     right: 16px;
     display: inline-block;
     text-decoration: none;
-    background: #87befd;
+    background: #aa5348;;
     color: #FFF;
     width: 120px;
     height: 120px;
@@ -21,9 +21,13 @@ body{
   }
   
   .btn-circle-flat:hover {
-    background: #668ad8;
+    background: #f0dca6;
   }
 
+  .btn{
+    color: #FFF;
+  }
+ 
   .text-center{
     color:black
 }

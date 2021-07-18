@@ -19,10 +19,14 @@
   <div class="user-container">
     <% @users.each do |t| %>
      <div class="user">
-       <div><%= t.name %></div>
+       <div>
+         <%= link_to user_path(t.id) do %> 
+              <%= t.name %>
+          <% end %>
+       </div>
        <div class="img">
-        <%= link_to user_path(t.id) do %> 
-          <%= image_tag t.image_url, size: "255x155" if t.image? %>
+         <%= link_to user_path(t.id) do %> 
+            <%= image_tag t.image_url, size: "255x155" if t.image? %>
          <% end %>
        </div>
       
